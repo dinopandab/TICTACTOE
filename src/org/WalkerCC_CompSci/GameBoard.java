@@ -9,6 +9,7 @@ public class GameBoard {
     Space spaces[];
     String spacesText[];
 
+
     public GameBoard(){
         spaces = new Space[9];
 

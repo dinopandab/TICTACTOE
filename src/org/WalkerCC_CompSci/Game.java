@@ -1,6 +1,7 @@
 package org.WalkerCC_CompSci;
 
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class Game {
@@ -63,14 +64,53 @@ public class Game {
 
     }
 
-    private boolean CheckForWin() {
-        //Implement this method.
-        return false;
+    private boolean CheckForWin( Space spaces[]) {
+        //row
+        if(spaces[0] == spaces[1] && spaces[1] == spaces[2]){
+                return true;
+            }
+            else if(spaces[2] == spaces[3] && spaces[3] == spaces[4]){
+                return true;
+            }
+            else if(spaces[4] == spaces[5] && spaces[5] == spaces[6]){
+                return true;
+            }
+            //column
+        if(spaces[0] == spaces[3] && spaces[3] == spaces[6]){
+            return true;
+        }
+        else if(spaces[1] == spaces[4] && spaces[4] == spaces[7]){
+            return true;
+        }
+        else if(spaces[2] == spaces[5] && spaces[5] == spaces[8]){
+            return true;
+        }
+        //diag
+        if(spaces[0] == spaces[1] && spaces[1] == spaces[2]){
+            return true;
+        }
+        else if(spaces[2] == spaces[3] && spaces[3] == spaces[4]){
+            return true;
+        }
+
+
+
+
+
+
     }
 
     private boolean IsFilled(){
+
+        if (){
+
+
+
+        }
+
+
         //Implement this method.
-        return false;
+
     }
 
 }
