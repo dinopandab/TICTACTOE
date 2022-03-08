@@ -64,34 +64,39 @@ public class Game {
 
     }
 
-    private boolean CheckForWin( Space spaces[]) {
+    private boolean CheckForWin() {
         //row
-        if(spaces[0] == spaces[1] && spaces[1] == spaces[2]){
-                return true;
-            }
-            else if(spaces[2] == spaces[3] && spaces[3] == spaces[4]){
-                return true;
-            }
-            else if(spaces[4] == spaces[5] && spaces[5] == spaces[6]){
-                return true;
-            }
-            //column
-        if(spaces[0] == spaces[3] && spaces[3] == spaces[6]){
+        if(this.gameBoard.spaces[0] == this.gameBoard.spaces[1] && this.gameBoard.spaces[1] == this.gameBoard.spaces[2]){
             return true;
         }
-        else if(spaces[1] == spaces[4] && spaces[4] == spaces[7]){
+        else if(this.gameBoard.spaces[2] == this.gameBoard.spaces[3] && this.gameBoard.spaces[3] == this.gameBoard.spaces[4]){
             return true;
         }
-        else if(spaces[2] == spaces[5] && spaces[5] == spaces[8]){
+        else if(this.gameBoard.spaces[4] == this.gameBoard.spaces[5] && this.gameBoard.spaces[5] == this.gameBoard.spaces[6]){
+            return true;
+        }else if(this.gameBoard.spaces[6] == this.gameBoard.spaces[7] && this.gameBoard.spaces[7] == this.gameBoard.spaces[8]){
             return true;
         }
+
+        //column
+        if(this.gameBoard.spaces[0] == this.gameBoard.spaces[3] && this.gameBoard.spaces[3] == this.gameBoard.spaces[6]){
+            return true;
+        }
+        else if(this.gameBoard.spaces[1] == this.gameBoard.spaces[4] && this.gameBoard.spaces[4] == this.gameBoard.spaces[7]){
+            return true;
+        }
+        else if(this.gameBoard.spaces[2] == this.gameBoard.spaces[5] && this.gameBoard.spaces[5] == this.gameBoard.spaces[8]){
+            return true;
+        }
+
         //diag
-        if(spaces[0] == spaces[1] && spaces[1] == spaces[2]){
+        if(this.gameBoard.spaces[0] == this.gameBoard.spaces[4] && this.gameBoard.spaces[4] == this.gameBoard.spaces[8]){
             return true;
         }
-        else if(spaces[2] == spaces[3] && spaces[3] == spaces[4]){
+        else if(this.gameBoard.spaces[2] == this.gameBoard.spaces[4] && this.gameBoard.spaces[4] == this.gameBoard.spaces[6]){
             return true;
         }
+
 
 
 
@@ -102,10 +107,13 @@ public class Game {
 
     private boolean IsFilled(){
 
-        if (){
+        for (int i = 0; i < 9; i++) {
+           if(this.gameBoard.spaces[i] == this.gameBoard.spaces[2] ) {
 
 
 
+
+           }
         }
 
 
