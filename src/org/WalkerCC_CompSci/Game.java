@@ -1,6 +1,8 @@
 package org.WalkerCC_CompSci;
 
 
+import sun.invoke.empty.Empty;
+
 import javax.swing.*;
 import java.util.Scanner;
 
@@ -66,40 +68,36 @@ public class Game {
 
     private boolean CheckForWin() {
         //row
-        if(this.gameBoard.spaces[0] == this.gameBoard.spaces[1] && this.gameBoard.spaces[1] == this.gameBoard.spaces[2]){
+        if(this.gameBoard.spacesText[0] .equals(this.gameBoard.spacesText[1]) && this.gameBoard.spacesText[1] .equals(this.gameBoard.spacesText[2])){
             return true;
         }
-        else if(this.gameBoard.spaces[2] == this.gameBoard.spaces[3] && this.gameBoard.spaces[3] == this.gameBoard.spaces[4]){
+        else if(this.gameBoard.spacesText[3] .equals(this.gameBoard.spacesText[4])&& this.gameBoard.spacesText[4] .equals(this.gameBoard.spacesText[5])){
             return true;
         }
-        else if(this.gameBoard.spaces[4] == this.gameBoard.spaces[5] && this.gameBoard.spaces[5] == this.gameBoard.spaces[6]){
-            return true;
-        }else if(this.gameBoard.spaces[6] == this.gameBoard.spaces[7] && this.gameBoard.spaces[7] == this.gameBoard.spaces[8]){
+        else if(this.gameBoard.spacesText[6] .equals(this.gameBoard.spacesText[7])  && this.gameBoard.spacesText[7] .equals(this.gameBoard.spacesText[8]) ){
             return true;
         }
 
         //column
-        if(this.gameBoard.spaces[0] == this.gameBoard.spaces[3] && this.gameBoard.spaces[3] == this.gameBoard.spaces[6]){
+        else if (this.gameBoard.spacesText[0] .equals(this.gameBoard.spacesText[3]) && this.gameBoard.spacesText[3] .equals( this.gameBoard.spacesText[6])){
             return true;
         }
-        else if(this.gameBoard.spaces[1] == this.gameBoard.spaces[4] && this.gameBoard.spaces[4] == this.gameBoard.spaces[7]){
+        else if(this.gameBoard.spacesText[1] .equals(this.gameBoard.spacesText[4])  && this.gameBoard.spacesText[4] .equals(this.gameBoard.spacesText[7]) ){
             return true;
         }
-        else if(this.gameBoard.spaces[2] == this.gameBoard.spaces[5] && this.gameBoard.spaces[5] == this.gameBoard.spaces[8]){
+        else if(this.gameBoard.spacesText[2].equals(this.gameBoard.spacesText[5])  && this.gameBoard.spacesText[5] .equals(this.gameBoard.spacesText[8]) ){
             return true;
         }
 
         //diag
-        if(this.gameBoard.spaces[0] == this.gameBoard.spaces[4] && this.gameBoard.spaces[4] == this.gameBoard.spaces[8]){
+        else if (this.gameBoard.spacesText[0].equals(this.gameBoard.spacesText[4]) && this.gameBoard.spacesText[4] .equals(this.gameBoard.spacesText[8])){
             return true;
         }
-        else if(this.gameBoard.spaces[2] == this.gameBoard.spaces[4] && this.gameBoard.spaces[4] == this.gameBoard.spaces[6]){
+        else if(this.gameBoard.spacesText[2].equals(this.gameBoard.spacesText[4]) && this.gameBoard.spacesText[4].equals(this.gameBoard.spacesText[6])){
             return true;
         }
 
-
-
-
+        return false;
 
 
 
@@ -108,15 +106,14 @@ public class Game {
     private boolean IsFilled(){
 
         for (int i = 0; i < 9; i++) {
-           if(this.gameBoard.spaces[i] == this.gameBoard.spaces[2] ) {
+           if(this.gameBoard.spaces[i] == Space.EMPTY) {
 
-
-
+                return false;
 
            }
         }
 
-
+        return true;
         //Implement this method.
 
     }
